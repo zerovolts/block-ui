@@ -1,0 +1,33 @@
+@require 'button'
+@require 'colors'
+@require 'blocks'
+
+input[type="radio"]
+  display none
+
+input[type="radio"] + label
+  background: green.mid
+
+input[type="radio"] + label
+  cursor pointer
+  margin 1em !important
+  position relative
+  color-block red
+  color: white.mid
+  font-family font-stack
+  font-weight 500
+  font-size 1.2em
+  padding-left 0.75em
+  padding-right 0.75em
+  padding-top 0.25em
+  padding-bottom 0.25em
+  border none
+
+input[type="radio"]:checked + label
+  box-shadow none
+  top block-depth
+
+/*
+input[type="radio"] + label
+  background: orange.mid
+*/

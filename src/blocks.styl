@@ -1,0 +1,35 @@
+@require 'colors'
+
+block-depth = 0.25em
+block-radius = 0.3em
+
+color-block(color)
+  background: color.mid
+  box-shadow: 0em block-depth color.dark
+  border-radius block-radius
+
+color-block-lighten(color, percent)
+
+block(color)
+  color-block color
+  margin 0.6em
+  margin-bottom 1.2em
+  padding 1em
+
+//------//
+
+block-raise(color)
+  position relative
+  box-shadow: 0em block-depth color.dark
+  bottom block-depth
+
+block-lower(color)
+  position relative
+  // should be color.light
+  box-shadow: 0em -(block-depth) color.dark
+  top block-depth
+
+block-normal()
+  box-shadow none
+  top 0em
+  bottom 0em

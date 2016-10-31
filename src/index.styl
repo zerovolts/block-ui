@@ -1,0 +1,19 @@
+@require 'colors'
+@require 'blocks'
+@require 'helpers'
+@require 'button'
+@require 'progress-bar'
+
+font-stack = Ubuntu
+
+body
+  padding 1em
+  background: gray.dark
+
+for color in colors
+  .block-{color.name}
+    block color
+  .progress-bar-{color.name}
+    progress-bar color
+  .button-{color.name}
+    button color
